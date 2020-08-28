@@ -81,73 +81,7 @@ bool GridPlugin::hideHUD() const {
 const int ArrowWidth = 10;
 const int ArrowHeight = 18;
 const int TextEnlarge = 15;
-// QPainterPath getArrowHead(QPainterPath line, const int thickness) {
-// 	QPointF p1 = line.pointAtPercent(0.0);
-// 	QPointF p2 = line.pointAtPercent(1.0);
-//     QLineF base(p1, p2);
-//     // Create the vector for the position of the base  of the arrowhead
-//     QLineF temp(QPoint(0,0), p2-p1);
-//     int val = ArrowHeight + thickness*4;
-//     if (base.length() < val) {
-//         val = (base.length() + thickness*2);
-//     }
-//     temp.setLength(base.length() + thickness*2 - val);
-//     // Move across the line up to the head
-//     QPointF bottonTranslation(temp.p2());
 
-//     // Rotate base of the arrowhead
-//     base.setLength(ArrowWidth + thickness*2);
-//     base.setAngle(base.angle() + 90);
-//     // Move to the correct point
-//     QPointF temp2 = p1 - base.p2();
-//     // Center it
-//     QPointF centerTranslation((temp2.x()/2), (temp2.y()/2));
-
-//     base.translate(bottonTranslation);
-//     base.translate(centerTranslation);
-
-//     QPainterPath path;
-//     path.moveTo(p2);
-//     path.lineTo(base.p1());
-//     path.lineTo(base.p2());
-//     path.lineTo(p2);
-// 	path.closeSubpath();
-//     return path;
-// }
-
-// // gets a shorter line to prevent overlap in the point of the arrow
-// QLineF getShorterLine(QPainterPath line, const int thickness) {
-// 	QPointF p1 = line.pointAtPercent(0.0);
-// 	QPointF p2 = line.pointAtPercent(1.0);
-// 	QLineF l(p1, p2);
-//     int val = ArrowHeight + thickness*4;
-//     if (l.length() < val) {
-//         val = (l.length() + thickness*2);
-//     }
-//     l.setLength(l.length() + thickness*2 - val);
-//     return l.toLine();
-// }
-
-// // blur selected rectangle region
-// void getBlur(QPainterPath rect, QPainter *painter, QImage &img, int radius){
-// 	//auto pixelRatio = pixmap.devicePixelRatio();
-// 	QRectF selection = rect.boundingRect();
-// 	QRect selectionScaled = QRect(selection.topLeft().toPoint(), selection.bottomRight().toPoint());
-
-// 	QGraphicsBlurEffect *blur = new QGraphicsBlurEffect;
-//     blur->setBlurRadius(radius);
-//     QGraphicsPixmapItem *item = new QGraphicsPixmapItem (
-//                 QPixmap::fromImage(img).copy(selectionScaled));
-//     item->setGraphicsEffect(blur);
-
-//     QGraphicsScene scene;
-//     scene.addItem(item);
-
-//     scene.render(painter, selection, QRectF());
-//     blur->setBlurRadius(radius+2);
-//     scene.render(painter, selection, QRectF());
-//     scene.render(painter, selection, QRectF());
-// }
 
 /**
 * Main function: runs plugin based on its ID
