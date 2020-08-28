@@ -22,6 +22,7 @@ OPTION (ENABLE_PAINT "Compile Paint plugin" ON)
 OPTION (ENABLE_PAGE "Compile Document Page Extraction plugin" ON)
 OPTION (ENABLE_COMPOSITE "Compile Composite Image plugin" ON)
 OPTION (ENABLE_SIMPLE "Compile SIMPLE PLUGIN" OFF)
+OPTION (ENABLE_GRID "Compile GridPlugin" ON)
 
 NMC_PREPARE_PLUGIN()
 NMC_FINDQT()
@@ -52,3 +53,8 @@ ENDIF(ENABLE_COMPOSITE)
 IF (ENABLE_SIMPLE)
     add_subdirectory(SIMPLE_PLUGIN)
 ENDIF(ENABLE_SIMPLE)
+
+IF (ENABLE_GRID)
+    add_subdirectory(GridPlugin)
+ENDIF(ENABLE_GRID)
+

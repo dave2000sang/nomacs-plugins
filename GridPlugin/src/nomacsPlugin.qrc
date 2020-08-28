@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/gridPlugin">
+	        <file>img/description.png</file>
+            <file>img/rect-outline.svg</file>
+            <file>img/square-outline.svg</file>
+    </qresource>
+</RCC>
