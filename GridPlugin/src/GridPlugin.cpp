@@ -38,6 +38,7 @@ namespace nmc {
 
 // Adds diagonal, horizontal, and vertical grid lines (assuming rectangle exists from begin to point)
 void GridPluginViewPort::addRiceGrid(QPointF begin, QPointF point) {
+	paths.last().moveTo(QPoint(begin.x(), begin.y()));
 	paths.last().lineTo(point);
 	paths.last().moveTo(QPoint(begin.x(), point.y()));
 	paths.last().lineTo(QPoint(point.x(), begin.y()));
